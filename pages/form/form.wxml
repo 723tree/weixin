@@ -1,0 +1,57 @@
+<view class='page'>
+  <view class='page_hd'>
+    <text class='page_title'>form</text>
+    <text class='page_desc'>表单</text>
+  </view>
+  <form class='page_bd' bindsubmit="formSubmit" bindreset="formReset">
+    <view class='section section_gap'>
+      <view class='section_title'>switch</view>
+      <switch name="switch" checked="{{false}}" type='switch' color='orange' bindchange='onSwitchChange'></switch>
+    </view>
+    
+
+    <view class='section section_gap'>
+      <view class='section_title'>slider</view>
+      <slider min='0' max='500' step='1' value='250' name="slider" show-value="{{true}}"></slider>
+    </view>
+
+    <view class='section'>
+      <view class='section_title'>input</view>
+      <input name="input" placeholder='please input hear'></input>
+    </view>
+
+    <view class='section section_gap'>
+      <view class='section_title'>radio</view>
+      <radio-group name="radio-group" bindchange="onRadioChange">
+        <label>
+          <radio value='战士' checked='true' />战士
+        </label>
+        <label>
+          <radio value='法师 ' />法师
+        </label>
+        <label>
+          <radio value='牧师' />牧师
+        </label>
+      </radio-group>
+    </view>
+
+    <view class='section section_gap'>
+      <view class='section_title'>checkbox</view>
+      <checkbox-group name="checkbox" bindchange="onCheckboxChange">
+        <label>
+          <checkbox value='checkbox1'>checkbox1</checkbox>
+        </label>
+        <label>
+          <checkbox value='checkbox2'>checkbox2</checkbox>
+        </label>
+        <label>
+          <checkbox value='checkbox3'>checkbox3</checkbox>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class='btn-area'>
+      <button form-type='submit'>Submit</button>
+      <button form-type='reset'>Reset</button>
+    </view>
+  </form>
+</view>

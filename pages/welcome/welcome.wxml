@@ -1,0 +1,9 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <image class="user-avatar" src='/images/avatar/2.png'></image>
+  <text class="user-name">Hello,三月</text>
+  <!-- 如果想阻止冒泡事件，用catchtap替代bindtap -->
+  <view class='moto-container' bindtap="onTap">
+    <text class='moto'>开启小程序之旅</text>
+  </view>
+</view>
